@@ -11,21 +11,33 @@
 
 // testJackpot(["SS", "SS", "SS", "Ss"]) ➞ false
 
-function testJackpot(arr) {
-    let newArr = []; 
 
-    for ( i = 0; i < arr.length; i++ ) {
-        if (arr[i] === arr[0]) {
-            newArr.push(arr[i])
+// this function works but not very intuitive
+// function testJackpot(arr) {
+//     let newArr = []; 
+
+//     for ( i = 0; i < arr.length; i++ ) {
+//         if (arr[i] === arr[0]) {
+//             newArr.push(arr[i])
+//         }
+//     }
+
+//     if (newArr.length === 4) {
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+
+// this function is 'better' :) 
+function testJackpot(arr) {
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[0]) {
+            return false
         }
     }
-
-    if (newArr.length === 4) {
-        return true
-    }
-    else {
-        return false
-    }
+    return true
 }
 
-console.log(testJackpot(["abc", "abc", "abc", "abc"]));
+console.log(testJackpot(["SS", "Ss", "SS", "SS"]));
