@@ -42,3 +42,4 @@ function longest7SegmentWord(arr) {
 }
 
 console.log(longest7SegmentWord(["coding", "crackers", "edabit", "celebration"]));
+
